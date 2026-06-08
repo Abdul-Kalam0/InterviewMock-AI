@@ -23,6 +23,14 @@ Built with React, Node.js, Express, MongoDB, Gemini AI, JWT Authentication, and 
 
 ---
 
+## 🎥 Demo Video
+
+Watch a complete walkthrough of the application:
+
+[Demo Video Link](https://www.loom.com/share/017139f926f84acab7c4d3e9c6af0287)
+
+---
+
 ## ⚡ Quick Start
 
 ```bash
@@ -88,13 +96,7 @@ npm run dev
 
 ---
 
-## 🎥 Demo Video
 
-Watch a complete walkthrough of the application:
-
-[Demo Video Link](#)
-
----
 
 ## ✨ Features
 
