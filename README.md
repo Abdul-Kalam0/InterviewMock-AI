@@ -318,9 +318,8 @@ AI-Mock-Interview
 
 GitHub: https://github.com/Abdul-Kalam0
 
-LinkedIn: https://www.linkedin.com/in/your-profile
 
-Email: [your-email@example.com](mailto:your-email@example.com)
+Email: abdulkalamblycomp@gmail.com
 
 ---
 
