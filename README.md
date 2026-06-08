@@ -1,6 +1,8 @@
 # 🚀 AI Mock Interview Platform
 
-AI Mock Interview Platform is a full-stack AI-powered web application that helps users practice technical interviews in a real-world interview environment using AI-generated questions and intelligent feedback analysis.
+An AI-powered mock interview platform that helps users prepare for technical interviews through AI-generated questions, timed interview sessions, and detailed performance feedback.
+
+Built with React, Node.js, Express, MongoDB, Gemini AI, JWT Authentication, and Google OAuth.
 
 ---
 
@@ -10,250 +12,322 @@ AI Mock Interview Platform is a full-stack AI-powered web application that helps
 
 ---
 
-## 📌 Features
+## 🔑 Demo Login
 
-- 🔐 Authentication (JWT + Google OAuth)
-- 🍪 Secure HTTP-only Cookie Authentication
-- 🛡️ Protected Routes & APIs
-- 🤖 AI-generated Technical Interview Questions
-- ⏳ Real-time Timed Interview Sessions
-- 📊 AI-generated Feedback & Performance Analysis
-- 🎯 Difficulty-based Interview Flow
-- 📱 Fully Responsive UI
-- 🎨 Modern SaaS-style Interface
-- 🔒 Rate Limiting & API Security
+> **Guest Account**
+>
+> Email: `demo@example.com`
+>
+> Password: `123@Demo`
+
 
 ---
 
-## 🛠️ Tech Stack
+## ⚡ Quick Start
+
+```bash
+git clone https://github.com/Abdul-Kalam0/AI-Mock-Interview.git
+
+cd AI-Mock-Interview
+
+# Install Backend Dependencies
+cd server
+npm install
+
+# Install Frontend Dependencies
+cd ../client
+npm install
+```
+
+Run Backend:
+
+```bash
+cd server
+npm run dev
+```
+
+Run Frontend:
+
+```bash
+cd client
+npm run dev
+```
+
+---
+
+## 🛠️ Technologies
 
 ### Frontend
 
-- React (Vite)
-- Tailwind CSS
-- React Router DOM
-- Axios
-- React Toastify
+* React (Vite)
+* Tailwind CSS
+* React Router DOM
+* Axios
+* React Toastify
 
 ### Backend
 
-- Node.js
-- Express.js
-- MongoDB (Mongoose)
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
 
 ### Authentication
 
-- JWT (HTTP-only cookies)
-- Google OAuth
+* JWT Authentication
+* HTTP-only Cookies
+* Google OAuth
 
 ### AI Integration
 
-- Gemini API
+* Gemini API
 
 ### Deployment
 
-- Frontend: Vercel
-- Backend: Vercel
+* Vercel
+
+---
+
+## 🎥 Demo Video
+
+Watch a complete walkthrough of the application:
+
+[Demo Video Link](#)
+
+---
+
+## ✨ Features
+
+### Authentication
+
+* User Registration & Login
+* Google OAuth Login
+* JWT Authentication
+* Secure HTTP-only Cookie Storage
+* Protected Routes
+
+### AI Interview Experience
+
+* AI-Generated Technical Questions
+* Difficulty-Based Interview Flow
+* Dynamic Question Generation
+* Personalized Interview Sessions
+
+### Interview Management
+
+* Start New Interview Sessions
+* Real-Time Timed Interviews
+* Submit Answers During Interview
+* Track Interview Progress
+
+### Feedback & Analysis
+
+* AI-Powered Performance Evaluation
+* Detailed Feedback Reports
+* Strengths & Weakness Analysis
+* Overall Interview Score
+
+### User Experience
+
+* Fully Responsive Design
+* Modern SaaS-Inspired UI
+* Toast Notifications
+* Protected Navigation
 
 ---
 
 ## 📸 Screenshots
 
-### Login
+### Login Page
 
 ![Login](./screenshots/Login.jpg)
-
----
 
 ### Dashboard
 
 ![Dashboard](./screenshots/Dashboard.jpg)
 
----
-
-### Interview Page
+### Interview Session
 
 ![Interview](./screenshots/Interview.jpg)
 
----
-
-### Feedback Page
+### Feedback Report
 
 ![Feedback](./screenshots/Feedback.jpg)
 
 ---
 
+## 📡 API Reference
+
+### Authentication
+
+#### POST `/auth/register`
+
+Register a new user.
+
+**Response**
+
+```json
+{
+  "user": {},
+  "token": "jwt_token"
+}
+```
+
+---
+
+#### POST `/auth/login`
+
+Login user.
+
+**Response**
+
+```json
+{
+  "user": {},
+  "token": "jwt_token"
+}
+```
+
+---
+
+#### GET `/auth/me`
+
+Get authenticated user details.
+
+**Response**
+
+```json
+{
+  "user": {}
+}
+```
+
+---
+
+### Interview
+
+#### POST `/interview/start`
+
+Generate and start a new interview session.
+
+**Response**
+
+```json
+{
+  "interviewId": "12345",
+  "questions": []
+}
+```
+
+---
+
+#### POST `/interview/answer`
+
+Submit answer for evaluation.
+
+**Response**
+
+```json
+{
+  "success": true
+}
+```
+
+---
+
+#### GET `/interview/summary/:interviewId`
+
+Retrieve complete interview feedback and score.
+
+**Response**
+
+```json
+{
+  "score": 85,
+  "feedback": []
+}
+```
+
+---
+
 ## 📁 Folder Structure
 
-```bash id="yzb0hb"
-AI-Mock-Interview/
+```text
+AI-Mock-Interview
 │
-├── client/
-│   ├── src/
-│   ├── components/
-│   ├── context/
-│   ├── pages/
-│   ├── routes/
-│   ├── services/
+├── client
+│   ├── src
+│   ├── components
+│   ├── pages
+│   ├── context
+│   ├── services
+│   └── routes
 │
-├── server/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── utils/
+├── server
+│   ├── controllers
+│   ├── middleware
+│   ├── models
+│   ├── routes
+│   └── utils
 │
 └── README.md
 ```
 
 ---
 
-## ⚙️ Installation & Setup
+## 🔐 Security
 
-### 1️⃣ Clone the repository
-
-```bash id="d3q2f5"
-git clone https://github.com/your-username/AI-Mock-Interview.git
-
-cd AI-Mock-Interview
-```
-
----
-
-### 2️⃣ Setup Backend
-
-```bash id="cc5lti"
-cd server
-
-npm install
-```
-
-Create `.env` file:
-
-```env id="hzk6ho"
-PORT=5000
-
-MONGO_URI=your_mongodb_uri
-
-JWT_SECRET=your_secret
-
-GOOGLE_CLIENT_ID=your_google_client_id
-
-GEMINI_API_KEY=your_gemini_api_key
-```
-
-Run backend:
-
-```bash id="o6v8lw"
-npm run dev
-```
-
----
-
-### 3️⃣ Setup Frontend
-
-```bash id="rxshlw"
-cd client
-
-npm install
-```
-
-Create `.env` file:
-
-```env id="x67zpq"
-VITE_API_URL=http://localhost:5000/api
-
-VITE_GOOGLE_CLIENT_ID=your_google_client_id
-```
-
-Run frontend:
-
-```bash id="22k31p"
-npm run dev
-```
-
----
-
-## 🔐 Authentication Flow
-
-### Email/Password Login
-
-- User logs in → JWT token stored in HTTP-only cookies
-- Protected routes validated using `/auth/me`
-
-### Google OAuth
-
-- User logs in using Google
-- Backend verifies Google credential
-- JWT cookie is issued after verification
-
----
-
-## 📡 API Endpoints (Sample)
-
-```bash id="9nzwqa"
-POST   /auth/register
-POST   /auth/login
-POST   /auth/google
-POST   /auth/logout
-GET    /auth/me
-
-POST   /interview/start
-POST   /interview/answer
-
-GET    /interview/summary/:interviewId
-```
-
----
-
-## 🏗️ Architecture & Security
-
-- 🏗️ Scalable MERN architecture
-- 🍪 Cross-origin secure cookie authentication
-- 🛡️ Rate limiting for authentication routes
-- 🔒 Protected backend APIs using JWT middleware
-- ⚡ Optimized frontend routing with protected/public routes
+* JWT Authentication
+* HTTP-only Cookie Storage
+* Protected Backend APIs
+* Google OAuth Verification
+* Rate Limiting
+* Secure Route Authorization
 
 ---
 
 ## 📊 Project Highlights
 
-- ⚡ Built multiple REST APIs
-- 🤖 Integrated Gemini AI for dynamic interview generation
-- 🔐 Secure authentication using JWT + OAuth
-- ⏳ Real-time timed interview workflow
-- 📊 Automated AI feedback and scoring system
-- 🎨 Production-grade SaaS-inspired UI/UX
-- 🚀 Deployed with cross-origin cookie handling
-
----
-
-## 🧠 Learnings
-
-- Full-stack MERN architecture
-- Authentication & authorization
-- Cross-origin cookie handling
-- AI-integrated applications
-- REST API design
-- State management & protected routing
-- Modern UI/UX design with Tailwind CSS
-- Deployment & production environment handling
+* Full-Stack MERN Application
+* Gemini AI Integration
+* AI-Powered Interview Generation
+* Automated Feedback & Scoring
+* Real-Time Interview Workflow
+* Secure Authentication System
+* Production-Ready Architecture
+* Responsive SaaS UI
 
 ---
 
 ## 🚧 Future Improvements
 
-- 🎤 Voice-based AI Interviews
-- 📹 Video Interview Support
-- 📈 User Analytics Dashboard
-- 🧠 Advanced AI Evaluation
-- 🌍 Multi-language Support
-- 🏆 Leaderboard & Rankings
+* Voice-Based AI Interviews
+* Video Interview Support
+* Advanced AI Evaluation
+* User Analytics Dashboard
+* Multi-Language Support
+* Leaderboards & Rankings
 
 ---
 
-## ⭐ Show Your Support
+## 📧 Contact
+
+**Abdul Kalam**
+
+GitHub: https://github.com/Abdul-Kalam0
+
+LinkedIn: https://www.linkedin.com/in/your-profile
+
+Email: [your-email@example.com](mailto:your-email@example.com)
+
+---
+
+## ⭐ Support
 
 If you found this project useful:
 
-👉 Star ⭐ this repository
+⭐ Star this repository
+
+🍴 Fork and contribute
+
+📢 Share it with others
