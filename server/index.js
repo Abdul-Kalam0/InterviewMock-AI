@@ -14,10 +14,10 @@ app.use(express.json());
 app.use(cookieParser());
 
 // CORS setup
+
 app.use(
   cors({
-    //origin: "http://localhost:5173",
-    origin: "https://interviewmock-001.vercel.app",
+    origin: process.env.FRONTEND_URL,
     credentials: true,
   }),
 );
