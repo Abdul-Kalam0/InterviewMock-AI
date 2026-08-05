@@ -1,21 +1,8 @@
 {
-  "headers": [
+  "rewrites": [
     {
       "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Content-Security-Policy",
-          "value": "default-src 'self'; img-src 'self' https://res.cloudinary.com data:; script-src 'self' https://accounts.google.com https://apis.google.com; style-src 'self' 'unsafe-inline'; connect-src 'self' https://accounts.google.com https://oauth2.googleapis.com https://interviewmock-001-backend.vercel.app; frame-src https://accounts.google.com; frame-ancestors 'none';"
-        },
-        {
-          "key": "Cross-Origin-Opener-Policy",
-          "value": "same-origin"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        }
-      ]
+      "destination": "/index.html"
     }
   ]
 }
